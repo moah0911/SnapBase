@@ -1,7 +1,9 @@
 import json
 import os
 
-CONFIG_FILE = "snapbase_config.json"
+# Get the absolute path to the config file in the project root
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_FILE = os.path.join(PROJECT_ROOT, "snapbase_config.json")
 
 DEFAULT_CONFIG = {
     "api_key": None,
